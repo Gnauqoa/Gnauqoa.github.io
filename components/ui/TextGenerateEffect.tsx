@@ -13,9 +13,8 @@ export const TextGenerateEffect = ({
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
   useEffect(() => {
-    console.log(wordsArray);
     animate(
-      "span",
+      "span, a",
       {
         opacity: 1,
       },
@@ -30,12 +29,38 @@ export const TextGenerateEffect = ({
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => {
+          if (idx > 9)
+            return (
+              <motion.a
+                key={word + idx}
+                href="https://rubyonrails.org"
+                target="_blank"
+                className={`text-[#ba170a] opacity-0`}
+              >
+                {word}{" "}
+              </motion.a>
+            );
+          if (idx === 3)
+            return (
+              <motion.span key={word + idx} className={`text-purple opacity-0`}>
+                {word}{" "}
+              </motion.span>
+            );
+          if (idx === 8)
+            return (
+              <motion.a
+                key={word + idx}
+                href="https://nextjs.org"
+                target="_blank"
+                className={`text-[#2d3947] opacity-0`}
+              >
+                {word}{" "}
+              </motion.a>
+            );
           return (
             <motion.span
               key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 3 ? "text-purple" : "dark:text-white text-black"
-                } opacity-0`}
+              className={`dark:text-white text-black opacity-0`}
             >
               {word}{" "}
             </motion.span>
@@ -47,9 +72,7 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      {/* mt-4 to my-4 */}
       <div className="my-4">
-        {/* remove  text-2xl from the original */}
         <div className=" dark:text-white text-black leading-snug tracking-wide">
           {renderWords()}
         </div>
