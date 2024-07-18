@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Skills", link: "#skills" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -16,16 +16,6 @@ export const gridItems = [
     img: "/b1.svg",
     spareImg: "",
   },
-  // {
-  //   id: 2,
-  //   title: "I'm very flexible with time zone communications",
-  //   description: "",
-  //   className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-  //   imgClassName: "",
-  //   titleClassName: "justify-start",
-  //   img: "",
-  //   spareImg: "",
-  // },
   {
     id: 3,
     title: "My tech stack",
@@ -134,30 +124,76 @@ export const testimonials = [
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    name: "ruby on rails",
+    img: "/railsFull.svg",
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    name: "nextjs",
+    img: "/nextjs.svg",
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    name: "Remix",
+    img: "/remix.svg",
   },
   {
     id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    name: "Material UI",
+    img: "/mui.svg",
   },
   {
     id: 5,
+    name: "tailwind",
+    img: "/tailwind.svg",
+  },
+  {
+    id: 6,
+    name: "redux",
+    img: "/redux.png",
+  },
+  {
+    id: 7,
+    name: "postgres",
+    img: "/postgresql.svg",
+  },
+  {
+    id: 8,
+    name: "mongodb",
+    img: "/mongodb.svg",
+  },
+  {
+    id: 9,
+    name: "redis",
+    img: "/redis.svg",
+  },
+  {
+    id: 10,
+    name: "git",
+    img: "/git.svg",
+  },
+  {
+    id: 11,
+    name: "react native",
+    img: "/reactNative.svg",
+  },
+  {
+    id: 10,
+    name: "java",
+    img: "/java.png",
+  },
+  {
+    id: 11,
+    name: "cpp",
+    img: "/cpp.svg",
+  },
+  {
+    id: 12,
+    name: "c#",
+    img: "/csharp.svg",
+  },
+  {
+    id: 13,
     name: "docker.",
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
@@ -198,7 +234,7 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/github.svg",
     href: process.env.PROFILE_URL,
   },
   {
