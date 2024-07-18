@@ -29,7 +29,7 @@ const RecentProjects = () => {
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="z-10 absolute top-0 w-full h-full object-cover"
                 />
               </div>
 
