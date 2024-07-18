@@ -4,19 +4,34 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import ProjectModal from "./ProjectModal";
+import useToggle from "@/hooks/useToggle";
+import { useState } from "react";
+import { Project } from "@/@types/project";
 
 const RecentProjects = () => {
+  const { toggle, onClose } = useToggle();
+  const [currentProject, setCurrentProject] = useState<Project | null>(null);
   return (
     <div id="projects" className="py-20">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
+      <ProjectModal
+        project={currentProject}
+        open={toggle}
+        onClose={onClose}
+        {...currentProject}
+      />
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
+            onClick={() => {
+              setCurrentProject(item);
+            }}
           >
             <PinContainer title={item.linkTitle} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
@@ -62,7 +77,11 @@ const RecentProjects = () => {
                   ))}
                 </div>
                 <div className="flex flex-col">
-                  <a href={item.link} target="_blank">
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <div className="flex  items-center">
                       <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                         Check Live Site
@@ -71,8 +90,13 @@ const RecentProjects = () => {
                     </div>
                   </a>
                   {item.linkRepo && (
-                    <a href={item.linkRepo} target="_blank">
-                      <div className="flex  items-center">
+                    <a
+                      href={item.linkRepo}
+                      target="_blank"
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-full"
+                    >
+                      <div className="flex flex-row w-full items-center">
                         <p className="flex lg:text-xl md:text-xs text-sm text-[#fff]">
                           Check Repo
                         </p>

@@ -1,3 +1,5 @@
+import { Project } from "@/@types/project";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -59,10 +61,10 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 1,
-    title: "Doxa.cafe, a philosophy-focused social media platform",
+    title: "Doxa.cafe",
     des: "Doxa.cafe is a unique social media platform designed specifically for those who have a passion for philosophy. Here, enthusiasts can connect, discuss, and explore a wide range of philosophical ideas and concepts. Whether you're a seasoned philosopher or just beginning your journey, Doxa Cafe offers a welcoming space for thoughtful dialogue, insightful debates, and the sharing of diverse perspectives.",
     img: "/p1.png",
     iconLists: [
