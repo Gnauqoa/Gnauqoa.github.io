@@ -72,7 +72,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Doxa.cafe, a philosophy-focused social media platform.",
+    title: "Doxa.cafe, a philosophy-focused social media platform",
     des: "Doxa.cafe is a unique social media platform designed specifically for those who have a passion for philosophy. Here, enthusiasts can connect, discuss, and explore a wide range of philosophical ideas and concepts. Whether you're a seasoned philosopher or just beginning your journey, Doxa Cafe offers a welcoming space for thoughtful dialogue, insightful debates, and the sharing of diverse perspectives.",
     img: "/p1.png",
     iconLists: [
@@ -84,6 +84,17 @@ export const projects = [
     ],
     link: "https://doxa.cafe",
     linkTitle: "doxa.cafe",
+    linkRepo: "",
+  },
+  {
+    id: 2,
+    title: "Portfolio",
+    des: "Current portfolio you are watching, include my expreience, my stacks, knowledge about technical.",
+    img: "/p2.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    link: "https://gnauqoa.github.io",
+    linkTitle: "gnauqoa.github.io",
+    linkRepo: "https://github.com/Gnauqoa/gnauqoa.github.io",
   },
 ];
 
