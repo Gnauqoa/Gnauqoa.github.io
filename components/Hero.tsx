@@ -35,12 +35,13 @@ const Hero = () => {
             words=" Hi! I'm Quang, a FullStack Developer with NextJS and Ruby on Rails."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
-
-          <MagicButton
-            title="Show my work"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
+          <a href="#projects">
+            <MagicButton
+              title="Show my work"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
         </div>
       </div>
     </div>

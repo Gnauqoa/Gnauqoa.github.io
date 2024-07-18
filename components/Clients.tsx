@@ -18,21 +18,23 @@ const Clients = () => {
         <div className="flex flex-wrap pt-24   items-center justify-center gap-16 max-lg:mt-10">
           {companies.map((company) => (
             <React.Fragment key={company.id}>
-              <div className="flex md:max-w-60 max-w-32 gap-2">
-                <img
-                  src={company.img}
-                  alt={company.name}
-                  className="max-h-[60px] w-auto"
-                />
-                {company.nameImg && (
+              <a href={company.href} target="_blank">
+                <div className="flex md:max-w-60 max-w-32 gap-2">
                   <img
-                    src={company.nameImg}
+                    src={company.img}
                     alt={company.name}
-                    width={company.id === 4 || company.id === 5 ? 100 : 150}
-                    className="md:w-24 w-20"
+                    className="max-h-[60px] w-auto"
                   />
-                )}
-              </div>
+                  {company.nameImg && (
+                    <img
+                      src={company.nameImg}
+                      alt={company.name}
+                      width={company.id === 4 || company.id === 5 ? 100 : 150}
+                      className="md:w-24 w-20"
+                    />
+                  )}
+                </div>
+              </a>
             </React.Fragment>
           ))}
         </div>
