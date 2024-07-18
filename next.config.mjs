@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     EMAIL: process.env.EMAIL,
-    GITHUB_URL: process.env.GITHUB_URL,
+    PROFILE_URL: process.env.PROFILE_URL,
     LINKEDIN_URL: process.env.LINKEDIN_URL,
     CV_URL: process.env.CV_URL,
   },

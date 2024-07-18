@@ -188,7 +188,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    href: process.env.GITHUB_URL,
+    href: process.env.PROFILE_URL,
   },
   {
     id: 2,
